@@ -1,15 +1,11 @@
-// const app = require('./app')
-
-// app.listen(3000, () => {
-//   console.log("Server running. Use our API on port: 3000")
-// })
-
-
 const app = require("./app");
 const mongoose = require("mongoose");
 
-const DB_HOST =
-  "mongodb+srv://montebet2020:Ok7akPE6uUnrv4zb@cluster0.n3m0qif.mongodb.net/contacrs_reader?retryWrites=true&w=majority";
+const { DB_HOST } = process.env
+
+// const { DB_HOST } = require('./config')
+
+// console.log(process.env.DB_HOST)
 
 mongoose
   .connect(DB_HOST)
